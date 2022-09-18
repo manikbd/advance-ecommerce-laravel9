@@ -169,6 +169,15 @@ class SubCategoryController extends Controller
 
    }
 
+//    public function  SubSubCategoryEdit($id){
+ 
+//     $subsub = SubSubCategory::findOrFail($id);
+//     $catid = $subsub->Category_id;
+//     $subcatrgiries = subcategory::where('Category_id',$catid)->orderBy('sub_catrgory','ASC')->get();
+//     $catrgiries = Category::orderBy('category','ASC')->get();
+//     return view('Backend.Category.SubSub_Edit',compact('catrgiries','subcatrgiries','subsub'));
+// }
+
 
 
    public function SubSubCategoryUpdate(Request $request){
@@ -207,4 +216,5 @@ class SubCategoryController extends Controller
        return redirect()->back()->with($notification);
 
    }
+   
 }

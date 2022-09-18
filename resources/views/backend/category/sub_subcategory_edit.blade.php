@@ -117,8 +117,32 @@
 	  
 	  </div>
   
-
+{{-- 
  
+
+	  <script type="text/javascript">
+        $(document).ready(function() {
+          $('#category_id').on('change', function(){
+             category_id = $(this).val();
+              if(category_id) {
+                  $.ajax({
+                      url: "{{  url('/category/subcategory/ajax') }}/"+category_id,
+                      type:"GET",
+                      dataType:"json",
+                      success:function(data) {
+                      var d =$('#subcategory_id').empty();
+                         $.each(data, function(key, value){
+                             $('#subcategory_id').append('<option value="'+ value.id +'">' + value.sub_catrgory + '</option>');
+                         });
+                      },
+                  });
+              } else {
+                  alert('danger');
+              }
+          });
+      });
+      </script> --}}
+
 
 
 @endsection
